@@ -2,7 +2,7 @@ package com.coding.test;
 
 import org.junit.jupiter.api.Test;
 
-import static com.coding.test.StringUtil.removeAllDuplicates;
+import static com.coding.test.StringUtil.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
@@ -30,6 +30,9 @@ public class StringUtilTests {
 
     private void assertDuplicatesMatch(String input, String expected, String message) {
         assertEquals(expected, removeAllDuplicates(input), message);
+        assertEquals(expected, removeAllDuplicates2(input), message);
+        assertEquals(expected, removeAllDuplicates3(input), message);
+        assertEquals(expected, removeAllDuplicates4(input), message);
     }
 
 }
